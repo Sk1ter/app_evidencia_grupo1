@@ -19,10 +19,10 @@ void main() async {
   // abrir las cajas necesarias con TIPADO FUERTE
   await Hive.openBox<User>('users');
   await Hive.openBox<String>('session');
-  await Hive.openBox<List<CartItem>>('carts'); // ✅ Tipado fuerte corregido
+  await Hive.openBox<List<CartItem>>('carts');
 
   // para restaurar la sesión antes de iniciar la UI
-  AuthService(); // esto también actualiza el CartService().cartKeyNotifier
+  AuthService(); 
 
   // iniciar la app
   runApp(const OxxoApp());
